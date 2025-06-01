@@ -1,5 +1,3 @@
-'use client';
-
 import {useState} from 'react';
 
 import {GameResult} from '@/types';
@@ -11,7 +9,7 @@ import {
 } from '@/utils/gameUtils';
 
 export function useDiceGame() {
-    const [threshold, setThreshold] = useState<number>(20);
+    const [threshold, setThreshold] = useState<number>(GAME_CONSTANTS.SLIDER_STEP);
     const [condition, setCondition] = useState<'under' | 'over'>('under');
     const [gameHistory, setGameHistory] = useState<GameResult[]>([]);
     const [lastResult, setLastResult] = useState<GameResult | null>(null);

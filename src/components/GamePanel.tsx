@@ -126,10 +126,11 @@ function GamePanel(props: GamePanelProps) {
             )}
             
             <Button
+                sx={styles.mainButton}
                 variant="contained"
                 size="large"
                 fullWidth
-                onClick={onPlay} sx={styles.mainButton}
+                onClick={onPlay}
             >
                 Play
             </Button>
