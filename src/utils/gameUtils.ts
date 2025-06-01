@@ -5,11 +5,13 @@ export const generateRandomNumber = (): number => {
 };
 
 export const checkWinCondition = (result: number, threshold: number, condition: 'under' | 'over'): boolean => {
-    return condition === 'over' ? result > threshold : result < threshold;
+    return condition === 'over'
+        ? result > threshold
+        : result < threshold;
 };
 
 export const formatTime = (date: Date): string => {
-    return date.toLocaleTimeString('ru-RU', {
+    return date.toLocaleTimeString('uk-UA', {
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit'

@@ -102,8 +102,8 @@ function GamePanel(props: GamePanelProps) {
             <Slider
                 size="small"
                 marks
-                step={GAME_CONSTANTS.SLIDER_STEP}
                 valueLabelDisplay="on"
+                step={GAME_CONSTANTS.SLIDER_STEP}
                 min={GAME_CONSTANTS.MIN_THRESHOLD}
                 max={GAME_CONSTANTS.MAX_THRESHOLD}
                 value={threshold}

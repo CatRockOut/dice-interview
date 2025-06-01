@@ -1,6 +1,6 @@
 'use client';
 
-import {useState, useCallback} from 'react';
+import {useState} from 'react';
 
 import {GameResult} from '@/types';
 import {GAME_CONSTANTS} from '@/constants/gameConstants';
@@ -17,7 +17,7 @@ export function useDiceGame() {
     const [lastResult, setLastResult] = useState<GameResult | null>(null);
     const [error, setError] = useState<string>('');
     
-    const playGame = useCallback(() => {
+    const playGame = () => {
         setError('');
         
         if (!threshold) {
@@ -45,7 +45,7 @@ export function useDiceGame() {
         setGameHistory((prev) => (
             [gameResult, ...prev].slice(0, GAME_CONSTANTS.MAX_HISTORY_SIZE)
         ));
-    }, [threshold, condition]);
+    };
     
     return {
         threshold,
