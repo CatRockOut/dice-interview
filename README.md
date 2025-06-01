@@ -2,6 +2,8 @@
 
 This is a Dice Game web application built with **TypeScript**, **Next.js** and **Material UI**.
 
+You can try the application here: [dice-interview.vercel.app](https://dice-interview.vercel.app)
+
 ## Description
 
 The game allows users to test their luck by predicting whether a randomly generated number (between 1 and 100) will be **greater** or **less** than a user-defined threshold.
