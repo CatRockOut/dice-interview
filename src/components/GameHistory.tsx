@@ -15,6 +15,10 @@ const styles = {
     headTableCell: {
         fontWeight: '500',
         lineHeight: '171.429%'
+    },
+    bodyTableCell: {
+        p: '6px 16px',
+        height: '32px'
     }
 };
 
@@ -46,11 +50,18 @@ function GameHistory({history}: { history: GameResult[] }) {
                 <TableBody>
                     {history.map((game) => (
                         <TableRow key={game.id}>
-                            <TableCell>{formatTime(game.timestamp)}</TableCell>
-                            <TableCell>
+                            <TableCell sx={styles.bodyTableCell}>
+                                {formatTime(game.timestamp)}
+                            </TableCell>
+                            <TableCell sx={styles.bodyTableCell}>
                                 {game.condition.charAt(0).toUpperCase() + game.condition.slice(1)} {game.threshold}
                             </TableCell>
-                            <TableCell sx={{color: game.won ? COLORS.WIN_TEXT : COLORS.LOSE}}>
+                            <TableCell
+                                sx={{
+                                    ...styles.bodyTableCell,
+                                    color: game.won ? COLORS.WIN_TEXT : COLORS.LOSE,
+                                }}
+                            >
                                 {game.result}
                             </TableCell>
                         </TableRow>

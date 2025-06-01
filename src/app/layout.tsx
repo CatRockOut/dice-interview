@@ -17,9 +17,9 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
     return (
         <html lang="en">
         <body className={roboto.className}>
-        <AppRouterCacheProvider options={{key: 'css'}}>
-            {children}
-        </AppRouterCacheProvider>
+            <AppRouterCacheProvider options={{key: 'css'}}>
+                {children}
+            </AppRouterCacheProvider>
         </body>
         </html>
     );
