@@ -2,7 +2,7 @@
 
 This is a Dice Game web application built with **TypeScript**, **Next.js** and **Material UI**.
 
-You can try the application here: [dice-interview.vercel.app](https://dice-interview.vercel.app)
+You can try the application here: [dice-game](https://dice-game-delta-pied.vercel.app)
 
 ## Description
 
